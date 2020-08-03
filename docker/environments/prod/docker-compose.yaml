@@ -3,7 +3,7 @@ services:
   node-server:
     build: 
         context: .
-        dockerfile: ../images/node-server
+        dockerfile: ../../images/node-server
     restart: "no"
     ports:
       - ${HTTP_SERVER_PORT}:3000
