@@ -3,7 +3,7 @@ services:
   node-server:
     build:
       context: .
-      dockerfile: ../images/node-server
+      dockerfile: ../../images/node-server
     entrypoint: ["npm", "run", "watch"]
     restart: "no"
     ports:
