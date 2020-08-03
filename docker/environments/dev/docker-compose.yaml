@@ -1,0 +1,18 @@
+version: "3"
+services:
+  node-server:
+    build:
+      context: .
+      dockerfile: ../images/node-server
+    entrypoint: ["npm", "run", "watch"]
+    restart: "no"
+    ports:
+      - ${HTTP_SERVER_PORT}:3000
+      - 9229:9229
+    networks:
+      - default
+    volumes:
+      - ../../../src:/usr/src/app
+networks:
+  default:
+    external: false
