@@ -1,0 +1,4 @@
+.vscode/
+!ideConfigExamples/.vscode/
+
+src/node_modules
