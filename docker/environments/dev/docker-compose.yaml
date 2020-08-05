@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: ../../images/node-server
+      args:
+          - NODE_VERSION=${NODE_VERSION}
     entrypoint: ["npm", "run", "watch"]
     restart: "no"
     ports:
